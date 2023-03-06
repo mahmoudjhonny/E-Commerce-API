@@ -46,7 +46,8 @@ const logIncontroller = async (req, res) => {
       jwt: accessToken(user._id, user.isAdmin),
     });
   } catch (err) {
-    res.status(500).json(err);
+    res.status(400).json(err);
+    console.log(err);
   }
 };
 
