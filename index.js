@@ -13,7 +13,9 @@ const app = express();
 dotenv.config();
 
 mongoose
-  .connect(process.env.MONGO_URL)
+  .connect(
+    "mongodb+srv://mahmoud:mahmoud@cluster0.vu6jlts.mongodb.net/MernEcommerceApp"
+  )
   .then(() => {
     console.log("DB connection established successfully");
   })
